@@ -12,6 +12,7 @@
 		C64652DE2866A74400A931FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64652DD2866A74400A931FB /* Assets.xcassets */; };
 		C64652E12866A74400A931FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C64652E02866A74400A931FB /* Preview Assets.xcassets */; };
 		C64652E82866A80E00A931FB /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64652E72866A80E00A931FB /* Todo.swift */; };
+		C64652EA2866B57700A931FB /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64652E92866B57600A931FB /* DetailedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		C64652DD2866A74400A931FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C64652E02866A74400A931FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C64652E72866A80E00A931FB /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		C64652E92866B57600A931FB /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				C64652D92866A73F00A931FB /* TodoApp.swift */,
 				C64652E72866A80E00A931FB /* Todo.swift */,
 				C64652DB2866A73F00A931FB /* ContentView.swift */,
+				C64652E92866B57600A931FB /* DetailedView.swift */,
 				C64652DD2866A74400A931FB /* Assets.xcassets */,
 				C64652DF2866A74400A931FB /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64652EA2866B57700A931FB /* DetailedView.swift in Sources */,
 				C64652DC2866A73F00A931FB /* ContentView.swift in Sources */,
 				C64652E82866A80E00A931FB /* Todo.swift in Sources */,
 				C64652DA2866A73F00A931FB /* TodoApp.swift in Sources */,
