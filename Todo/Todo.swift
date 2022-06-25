@@ -15,4 +15,8 @@ struct Todo: Identifiable {
     var title: String
     var isCompleted = false
     var priority = false
+    
+    func complete() {
+        
+    }
 }

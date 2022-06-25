@@ -20,9 +20,20 @@ struct ContentView: View {
                 HStack {
                     Image(systemName: todo.isCompleted ? "checkmark.square.fill" : "square")
                         .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
-                    Text(todo.title)
-                        .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
+                        .onTapGesture {
+                            print("placeholder.")
+                        }
+                    VStack(alignment: .leading) {
+                        Text(todo.title)
+                            .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
                         .strikethrough(todo.isCompleted)
+                        if todo.priority {
+                            Text("Overdue.")
+                                .font(.caption)
+                                .foregroundColor(.red)
+                        }
+                            
+                    }
                 }
             }
             .navigationTitle( "Todo")
