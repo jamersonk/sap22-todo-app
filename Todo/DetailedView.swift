@@ -18,6 +18,9 @@ struct DetailedView: View {
                 .padding()
             Button {
                 todo.isCompleted.toggle()
+                if todo.isCompleted {
+                    todo.isPriority = false
+                }
             } label: {
                 Text("\(todo.isCompleted ? "Mark as incomplete." : "I did it!")")
             }
