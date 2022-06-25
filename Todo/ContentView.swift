@@ -10,7 +10,7 @@ struct ContentView: View {
     
     @State var todos = [
         Todo(title: "Watch some Paw Patrol", isCompleted: true),
-        Todo(title: "Conduct a giveaway", priority:  true),
+        Todo(title: "Conduct a giveaway", isPriority:  true),
         Todo(title: "Randomly deduct some points")
     ]
     
@@ -22,19 +22,20 @@ struct ContentView: View {
                 } label: {
                     HStack {
                         Image(systemName: todo.isCompleted ? "checkmark.square.fill" : "square")
-                            .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
+                            .foregroundColor(todo.isPriority ? .red : todo.isCompleted ? .gray : .black)
                             .onTapGesture {
                                 if todo.isCompleted {
                                     todo.isCompleted = false
                                 } else {
                                     todo.isCompleted = true
+                                    todo.isPriority = false
                                 }
                             }
                         VStack(alignment: .leading) {
                             Text(todo.title)
-                                .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
+                                .foregroundColor(todo.isPriority ? .red : todo.isCompleted ? .gray : .black)
                                 .strikethrough(todo.isCompleted)
-                            if todo.priority {
+                            if todo.isPriority {
                                 Text("Overdue.")
                                     .font(.caption)
                                     .foregroundColor(.red)
