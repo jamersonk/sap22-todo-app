@@ -10,7 +10,7 @@ struct ContentView: View {
     
     var todos = [
         Todo(title: "Watch some Paw Patrol", isCompleted: true),
-        Todo(title: "Conduct a giveaway"),
+        Todo(title: "Conduct a giveaway", priority:  true),
         Todo(title: "Randomly deduct some points")
     ]
     
@@ -19,7 +19,10 @@ struct ContentView: View {
             List(todos) { todo in
                 HStack {
                     Image(systemName: todo.isCompleted ? "checkmark.square.fill" : "square")
+                        .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
                     Text(todo.title)
+                        .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
+                        .strikethrough(todo.isCompleted)
                 }
             }
             .navigationTitle( "Todo")
