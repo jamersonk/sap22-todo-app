@@ -8,7 +8,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var todos = [
+    @State var todos = [
         Todo(title: "Watch some Paw Patrol", isCompleted: true),
         Todo(title: "Conduct a giveaway", priority:  true),
         Todo(title: "Randomly deduct some points")
@@ -16,23 +16,30 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List(todos) { todo in
-                HStack {
-                    Image(systemName: todo.isCompleted ? "checkmark.square.fill" : "square")
-                        .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
-                        .onTapGesture {
-                            print("placeholder.")
-                        }
-                    VStack(alignment: .leading) {
-                        Text(todo.title)
+            List($todos) { $todo in
+                NavigationLink {
+                    DetailedView(todo: $todo)
+                } label: {
+                    HStack {
+                        Image(systemName: todo.isCompleted ? "checkmark.square.fill" : "square")
                             .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
-                        .strikethrough(todo.isCompleted)
-                        if todo.priority {
-                            Text("Overdue.")
-                                .font(.caption)
-                                .foregroundColor(.red)
+                            .onTapGesture {
+                                if todo.isCompleted {
+                                    todo.isCompleted = false
+                                } else {
+                                    todo.isCompleted = true
+                                }
+                            }
+                        VStack(alignment: .leading) {
+                            Text(todo.title)
+                                .foregroundColor(todo.priority ? .red : todo.isCompleted ? .gray : .black)
+                                .strikethrough(todo.isCompleted)
+                            if todo.priority {
+                                Text("Overdue.")
+                                    .font(.caption)
+                                    .foregroundColor(.red)
+                            }
                         }
-                            
                     }
                 }
             }

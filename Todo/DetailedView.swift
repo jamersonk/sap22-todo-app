@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DetailedView: View {
     
-    @State var todo = Todo(title: "Water the cat")
+    @Binding var todo: Todo
     
     var body: some View {
         VStack {
@@ -27,6 +27,6 @@ struct DetailedView: View {
 
 struct DetailedView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedView()
+        DetailedView(todo: .constant(Todo(title: "Feed the cat.")))
     }
 }
