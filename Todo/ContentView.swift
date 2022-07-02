@@ -13,6 +13,7 @@ struct ContentView: View {
         Todo(title: "Conduct a giveaway", isPriority:  true),
         Todo(title: "Randomly deduct some points")
     ]
+    @State var isSheetGiven = false
     
     var body: some View {
         NavigationView {
@@ -57,7 +58,17 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     EditButton()
                 }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        isSheetGiven = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
             }
+        }
+        .sheet(isPresented: $isSheetGiven) {
+            CreateView(todos: $todos)
         }
     }
 }
