@@ -23,12 +23,18 @@ struct DetailedView: View {
                 }
             } label: {
                 Text("\(todo.isCompleted ? "Mark as incomplete." : "I did it!")")
+                    .padding(5)
+                    .frame(maxWidth: .infinity)
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
             }
-            .padding()
+            .padding(.trailing)
+            .padding(.leading)
             Button{
                 todo.isPriority.toggle()
             } label: {
-                Text("\(todo.isPriority ? "Mark as not urgent." : "Mark as Urgent")")
+                Text("Mark as \(todo.isPriority ? "not urgent." : "urgent").")
             }
         }
     }
