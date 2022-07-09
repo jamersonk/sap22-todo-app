@@ -17,8 +17,6 @@ struct CreateView: View {
     var body: some View {
         Form {
             TextField("Title", text: $todoTitle)
-            
-            
             Button("Save Todo") {
                 let todo = Todo(title: todoTitle)
                 todos.append(todo)
