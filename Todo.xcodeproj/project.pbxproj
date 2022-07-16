@@ -15,6 +15,7 @@
 		C64652EA2866B57700A931FB /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64652E92866B57600A931FB /* DetailedView.swift */; };
 		C6D1CE99286FF48B00431A1B /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D1CE98286FF48B00431A1B /* CreateView.swift */; };
 		C6E1682B28791CC100472AD2 /* TodoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1682A28791CC100472AD2 /* TodoManager.swift */; };
+		C6E1682D2879211300472AD2 /* MainTodos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E1682C2879211300472AD2 /* MainTodos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		C64652E92866B57600A931FB /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 		C6D1CE98286FF48B00431A1B /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		C6E1682A28791CC100472AD2 /* TodoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoManager.swift; sourceTree = "<group>"; };
+		C6E1682C2879211300472AD2 /* MainTodos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTodos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,7 @@
 		C64652CD2866A73F00A931FB = {
 			isa = PBXGroup;
 			children = (
+				C6E1682C2879211300472AD2 /* MainTodos.swift */,
 				C6E1682A28791CC100472AD2 /* TodoManager.swift */,
 				C6D1CE98286FF48B00431A1B /* CreateView.swift */,
 				C64652D82866A73F00A931FB /* Todo */,
@@ -154,6 +157,7 @@
 				C64652DC2866A73F00A931FB /* ContentView.swift in Sources */,
 				C64652E82866A80E00A931FB /* Todo.swift in Sources */,
 				C64652DA2866A73F00A931FB /* TodoApp.swift in Sources */,
+				C6E1682D2879211300472AD2 /* MainTodos.swift in Sources */,
 				C6D1CE99286FF48B00431A1B /* CreateView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
